@@ -1,3 +1,9 @@
+call plug#begin()
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+call plug#end()
+
+
 syntax on
 :set number
 :set relativenumber
