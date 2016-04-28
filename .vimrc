@@ -1,6 +1,8 @@
 call plug#begin()
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'scrooloose/syntastic'
+Plug 'wincent/command-t'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 syntax on
@@ -13,3 +15,5 @@ set t_Co=256
 
 set wildmode=list:longest,full
 set ignorecase
+
+set clipboard=unnamed
