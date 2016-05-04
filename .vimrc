@@ -3,6 +3,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'scrooloose/syntastic'
 Plug 'wincent/command-t'
 Plug 'vim-ruby/vim-ruby'
+Plug 'kballard/vim-swift'
 call plug#end()
 
 syntax on
@@ -17,3 +18,8 @@ set wildmode=list:longest,full
 set ignorecase
 
 set clipboard=unnamed
+
+set nowrap
+
+map <C-k> :vs.<CR>
+map <C-p> :CommandT<CR>
