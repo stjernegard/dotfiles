@@ -21,9 +21,6 @@ set clipboard=unnamed
 
 set nowrap
 
-map <C-k> :vs.<CR>
-map <C-p> :CommandT<CR>
-
 map <leader>r :!ruby Scripts/CompileAndRun.rb <CR>
 
 set expandtab
