@@ -21,7 +21,9 @@ set clipboard=unnamed
 
 set nowrap
 
-map <leader>r :!ruby Scripts/CompileAndRun.rb <CR>
+map <leader>R :!ruby Scripts/BuildAndRunApp.rb <CR>
+map <leader>B :!ruby Scripts/BuildApp.rb <CR>
+map <leader>U :!ruby Scripts/RunTests.rb <CR>
 
 set expandtab
 set shiftwidth=4
