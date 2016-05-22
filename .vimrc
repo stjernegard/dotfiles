@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin()
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'scrooloose/syntastic'
@@ -7,8 +9,14 @@ Plug 'keith/swift.vim'
 call plug#end()
 
 syntax on
-:set number
-:set relativenumber
+set number
+set relativenumber
+set linebreak
+set ruler
+set backspace=indent,eol,start
+set showcmd
+set incsearch
+packadd matchit
 
 filetype plugin indent on
 
@@ -19,7 +27,8 @@ set ignorecase
 
 set clipboard=unnamed
 
-set nowrap
+map <leader>[ :tabprevious <CR>
+map <leader>] :tabnext <CR>
 
 map <leader>R :!ruby Scripts/BuildAndRunApp.rb <CR>
 map <leader>B :!ruby Scripts/BuildApp.rb <CR>
