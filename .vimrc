@@ -9,6 +9,8 @@ Plug 'keith/swift.vim'
 Plug 'mileszs/ack.vim'
 call plug#end()
 
+set shell=zsh\ -l
+
 syntax on
 set number
 set relativenumber
