@@ -7,7 +7,6 @@ Plug 'wincent/command-t'
 Plug 'vim-ruby/vim-ruby'
 Plug 'keith/swift.vim'
 Plug 'christoomey/vim-tmux-runner'
-Plug 'tokorom/syntastic-swiftlint.vim'
 Plug 'mileszs/ack.vim'
 call plug#end()
 
@@ -36,6 +35,8 @@ inoremap jj <Esc>
 
 map <leader>[ :tabprevious <CR>
 map <leader>] :tabnext <CR>
+
+let g:syntastic_swift_checkers = ['swiftlint']
 
 let g:VtrOrientation = 'h'
 let g:VtrUseVtrMaps = 1
