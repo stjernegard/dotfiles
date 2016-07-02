@@ -1,8 +1,10 @@
 set nocompatible
 
 call plug#begin()
+Plug 'easysid/mod8.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'scrooloose/syntastic'
+Plug 'mitsuse/autocomplete-swift'
 Plug 'wincent/command-t'
 Plug 'vim-ruby/vim-ruby'
 Plug 'keith/swift.vim'
@@ -13,18 +15,38 @@ call plug#end()
 set shell=zsh\ -l
 
 syntax on
+colorscheme mod8
+set background=light
+set t_Co=256
+
 set number
 set relativenumber
 set linebreak
-set ruler
 set backspace=indent,eol,start
 set showcmd
 set incsearch
 packadd matchit
 
-filetype plugin indent on
+set laststatus=2
+set statusline=\ [%n]\ %f\ %m%r%h\ %y\ [%{&ff}]    " buffer filename flags type format
+set statusline+=%=%l/%L,\ %-4v    " right hand side - line/total lines , column
 
-set t_Co=256
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+function! TrimWhiteSpace()
+    " Save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+    update
+endfunction
+
+filetype plugin indent on
 
 set wildmode=list:longest,full
 set wildignore+=build,pods,.DS_Store
@@ -32,6 +54,11 @@ set wildignore+=build,pods,.DS_Store
 set clipboard=unnamed
 
 inoremap jj <Esc>
+
+nnoremap Y y$
+
+nnoremap n nzz
+nnoremap N Nzz
 
 map <leader>[ :tabprevious <CR>
 map <leader>] :tabnext <CR>
