@@ -68,9 +68,11 @@ let g:syntastic_swift_checkers = ['swiftlint']
 let g:VtrOrientation = 'h'
 let g:VtrUseVtrMaps = 1
 
-map <leader>R :VtrSendCommandToRunner! ruby Scripts/BuildAndRunApp.rb <CR>
-map <leader>B :VtrSendCommandToRunner! ruby Scripts/BuildApp.rb <CR>
-map <leader>U :VtrSendCommandToRunner! ruby Scripts/RunTests.rb <CR>
+nnoremap <leader>R :VtrSendCommandToRunner! ruby Scripts/Run.rb <CR>
+nnoremap <leader>B :VtrSendCommandToRunner! ruby Scripts/Build.rb <CR>
+nnoremap <leader>T :VtrSendCommandToRunner! ruby Scripts/Test.rb <CR>
+nnoremap <leader>U :VtrSendCommandToRunner! ruby Scripts/UITest.rb <CR>
+nnoremap <leader>L :VtrSendCommandToRunner! ruby Scripts/LogTail.rb <CR>
 
 set expandtab
 set shiftwidth=4
