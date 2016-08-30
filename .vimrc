@@ -59,6 +59,7 @@ nnoremap Y y$
 
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap * *zz
 
 map <leader>[ :tabprevious <CR>
 map <leader>] :tabnext <CR>
@@ -68,6 +69,7 @@ let g:syntastic_swift_checkers = ['swiftlint']
 let g:VtrOrientation = 'h'
 let g:VtrUseVtrMaps = 1
 
+nnoremap <C-q> :bd <CR>
 nnoremap <leader>R :VtrSendCommandToRunner! ruby Scripts/Run.rb <CR>
 nnoremap <leader>B :VtrSendCommandToRunner! ruby Scripts/Build.rb <CR>
 nnoremap <leader>T :VtrSendCommandToRunner! ruby Scripts/Test.rb <CR>
