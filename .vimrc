@@ -29,7 +29,7 @@ packadd matchit
 
 set laststatus=2
 set statusline=\ [%n]\ %f\ %m%r%h\ %y\ [%{&ff}]    " buffer filename flags type format
-set statusline+=%=%l/%L,\ %-4v    " right hand side - line/total lines , column
+set statusline+=%=%l/%L\ %P\                       " right hand side - line/total lines , column
 
 autocmd BufWritePre * :call TrimWhiteSpace()
 
