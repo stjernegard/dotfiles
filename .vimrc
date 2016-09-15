@@ -49,9 +49,7 @@ endfunction
 filetype plugin indent on
 
 set wildmode=list:longest,full
-set wildignore+=build,pods,.DS_Store
-
-set clipboard=unnamed
+set wildignore+=build,pods,.DS_Store,Packages
 
 inoremap jj <Esc>
 
