@@ -25,7 +25,6 @@ set linebreak
 set backspace=indent,eol,start
 set showcmd
 set incsearch
-packadd matchit
 
 set laststatus=2
 set statusline=\ [%n]\ %f\ %m%r%h\ %y\ [%{&ff}]    " buffer filename flags type format
