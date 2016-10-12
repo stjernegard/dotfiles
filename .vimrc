@@ -4,7 +4,6 @@ call plug#begin()
 Plug 'easysid/mod8.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'scrooloose/syntastic'
-Plug 'mitsuse/autocomplete-swift'
 Plug 'wincent/command-t'
 Plug 'vim-ruby/vim-ruby'
 Plug 'keith/swift.vim'
