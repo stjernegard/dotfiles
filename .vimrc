@@ -1,15 +1,15 @@
 call plug#begin()
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t'
-Plug 'vim-syntastic/syntastic'
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'mitsuse/autocomplete-swift'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-sleuth'
 
-Plug 'keith/swift.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 call plug#end()
 
 
@@ -17,13 +17,10 @@ set mouse=a
 set syntax=on
 set number
 set relativenumber
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-
 
 highlight! link Visual ErrorMsg
 
+set clipboard=unnamed
 
 inoremap jj <Esc>
 
@@ -32,18 +29,22 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 
+map <C-j> <C-w>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+set splitbelow
+set splitright
+
+nnoremap ˙ gT
+nnoremap ¬ gt
+nnoremap T :tabnew<CR>
+
+set ignorecase
+set smartcase
+
 nnoremap <C-q> :bd <CR>
-
-nnoremap <leader>[ :tabprevious <CR>
-nnoremap <leader>] :tabnext <CR>
-
-nnoremap <leader>R :T vapor run <CR>
-nnoremap <leader>B :T vapor build && exit <CR>
-nnoremap <leader>T :T vapor test && exit <CR>
-
-
-autocmd BufNewFile,BufRead *.swift set filetype=swift
-autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
 
 autocmd BufWritePre * :call TrimWhiteSpace()
 function! TrimWhiteSpace()
@@ -62,6 +63,4 @@ endfunction
 set wildmode=list:longest,full
 set wildignore+=.build,pods,.DS_Store,Packages
 
-let g:neoterm_size = 30
-let g:syntastic_swift_checkers = ['swiftlint']
-let g:deoplete#enable_at_startup = 1
+let g:ale_fix_on_save = 1
