@@ -36,5 +36,3 @@ function precmd() {
 
 zle -N expand-aliases
 bindkey '\e^E' expand-aliases
-
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
