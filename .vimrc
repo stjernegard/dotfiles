@@ -17,6 +17,7 @@ set mouse=a
 set syntax=on
 set number
 set relativenumber
+set backspace=indent,eol,start
 
 highlight! link Visual ErrorMsg
 
