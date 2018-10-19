@@ -12,6 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 call plug#end()
 
+let mapleader = "\<SPACE>"
 
 set mouse=a
 set syntax=on
@@ -38,9 +39,9 @@ map <C-l> <C-W>l
 set splitbelow
 set splitright
 
-nnoremap ˙ gT
-nnoremap ¬ gt
-nnoremap T :tabnew<CR>
+nnoremap <C-l> gT
+nnoremap <C-h> gt
+nnoremap <C-t> :tabnew<CR>
 
 set ignorecase
 set smartcase
