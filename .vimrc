@@ -48,6 +48,8 @@ set smartcase
 
 nnoremap <C-q> :bd <CR>
 
+autocmd VimResized * :wincmd =
+
 autocmd BufWritePre * :call TrimWhiteSpace()
 function! TrimWhiteSpace()
     " Save last search, and cursor position.
