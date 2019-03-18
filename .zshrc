@@ -36,3 +36,11 @@ function precmd() {
 
 zle -N expand-aliases
 bindkey '\e^E' expand-aliases
+
+alias gfix='vim `git diff --name-only | uniq`'
+gprune() {
+    remote=${1-origin}
+    permanent_branches="master|develop"
+    git branch --merged | grep -v -E "(\*|$permanent_branches)" | xargs -n 1 git branch -d
+    git remote prune $remote || git remote prune `git remote`
+}
