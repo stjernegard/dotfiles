@@ -8,7 +8,7 @@ DISABLE_UPDATE_PROMPT=true
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git pod rails heroku zsh-autosuggestions)
+plugins=(git rails)
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
