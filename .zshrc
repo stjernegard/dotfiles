@@ -8,7 +8,7 @@ DISABLE_UPDATE_PROMPT=true
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git rails)
+plugins=(git rails swiftpm)
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
@@ -37,7 +37,7 @@ function precmd() {
 zle -N expand-aliases
 bindkey '\e^E' expand-aliases
 
-alias gfix='vim `git diff --name-only | uniq`'
+alias gfix='git diff --name-only | uniq | while read line ; do echo \"$line\" ; done | xargs -o vim -p'
 gprune() {
     remote=${1-origin}
     permanent_branches="master|develop"
