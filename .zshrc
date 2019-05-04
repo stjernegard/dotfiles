@@ -8,7 +8,7 @@ DISABLE_UPDATE_PROMPT=true
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git rails swiftpm)
+plugins=(git swiftpm)
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
