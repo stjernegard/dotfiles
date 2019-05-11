@@ -8,7 +8,7 @@ DISABLE_UPDATE_PROMPT=true
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git swiftpm)
+plugins=(git swiftpm docker docker-compose)
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
