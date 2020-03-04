@@ -4,7 +4,7 @@ export LANG=en_US.UTF-8
 
 ZSH_THEME="arrow"
 
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT='true'
 
 HIST_STAMPS="yyyy-mm-dd"
 
