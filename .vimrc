@@ -65,6 +65,6 @@ function! TrimWhiteSpace()
 endfunction
 
 set wildmode=list:longest,full
-set wildignore+=.build,pods,.DS_Store,Packages
+set wildignore+=.build,pods,.DS_Store,Packages,cache
 
 let g:ale_fix_on_save = 1
