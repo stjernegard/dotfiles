@@ -1,6 +1,8 @@
 call plug#begin()
 Plug 'mileszs/ack.vim'
-Plug 'wincent/command-t'
+Plug 'wincent/command-t', {
+  \ 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+  \}
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sleuth'
