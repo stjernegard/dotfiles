@@ -1,7 +1,8 @@
 call plug#begin()
 Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t', {
-  \ 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+  \ 'do': 'cd ruby/command-t/ext/command-t && /opt/homebrew/opt/ruby/bin/ruby extconf.rb && make',
+  \ 'branch': '5-x-release'
   \}
 
 Plug 'jiangmiao/auto-pairs'
@@ -11,7 +12,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
 call plug#end()
 
 let mapleader = "\<SPACE>"
@@ -68,5 +68,3 @@ endfunction
 
 set wildmode=list:longest,full
 set wildignore+=.build,pods,.DS_Store,Packages,cache,testBuild
-
-let g:ale_fix_on_save = 1
