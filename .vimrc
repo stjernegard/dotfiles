@@ -22,6 +22,7 @@ set number
 set relativenumber
 set backspace=indent,eol,start
 
+colorscheme default
 highlight! link Visual ErrorMsg
 
 set clipboard=unnamed
