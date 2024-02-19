@@ -40,7 +40,7 @@ bindkey '\e^E' expand-aliases
 alias gfix='git diff --name-only | uniq | while read line ; do echo \"$line\" ; done | xargs -o vim -p'
 gprune() {
     remote=${1-origin}
-    permanent_branches="master|develop"
+    permanent_branches="main|master|develop"
     git branch --merged | grep -v -E "(\*|$permanent_branches)" | xargs -n 1 git branch -d
     git remote prune $remote || git remote prune `git remote`
 }
