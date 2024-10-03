@@ -9,7 +9,7 @@ DISABLE_UPDATE_PROMPT='true'
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git swiftpm docker docker-compose)
-export EDITOR='vim'
+export EDITOR='nvim'
 
 source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zshrc-local ]; then
@@ -37,7 +37,7 @@ function precmd() {
 zle -N expand-aliases
 bindkey '\e^E' expand-aliases
 
-alias gfix='git diff --name-only | uniq | while read line ; do echo \"$line\" ; done | xargs -o vim -p'
+alias gfix="git diff --name-only | uniq | while read line ; do echo \"$line\" ; done | xargs -o $EDITOR -p"
 gprune() {
     remote=${1-origin}
     permanent_branches="main|master|develop"
