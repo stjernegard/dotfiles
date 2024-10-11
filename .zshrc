@@ -37,7 +37,7 @@ function precmd() {
 zle -N expand-aliases
 bindkey '\e^E' expand-aliases
 
-alias gfix="git diff --name-only | uniq | xargs -o $EDITOR -p"
+alias gfix='git diff --name-only | uniq | while read line ; do echo \"$line\" ; done | xargs -o $EDITOR -p'
 gprune() {
     remote=${1-origin}
     permanent_branches="main|master|develop"
