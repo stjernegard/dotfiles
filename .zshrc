@@ -10,6 +10,8 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git swiftpm docker docker-compose)
 export EDITOR='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zshrc-local ]; then
